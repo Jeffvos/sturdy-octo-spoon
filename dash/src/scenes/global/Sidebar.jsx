@@ -29,8 +29,72 @@ const Sidebar = () => {
             "& .pro-icon-wrapper":{
                 backgroundColor: "transparent !important"
             },
-            
+            "& .pro-inner-item":{
+                padding: "5px 35px 5px 2px !important"
+            },
+            "& .pro-inner-item:hover":{
+                color: "#868dfb !important"
+            },
+            "& .pro-menu-item.active":{
+                color: "#6870fa !important"
+            }
+
         }}>
+            <ProSidebar collapsed={isCollapsed}>
+                <Menu iconShape="square">
+                    <MenuItem
+                        onClick={()=> setIsCollapsed(!isCollapsed)}
+                        icon={isCollapsed ? <MenuOutLinedICon /> : undefined}
+                        style={{
+                            margin: "10px 0 20px 0",
+                            color: colors.grey[100]
+                        }}>
+                            {!isCollapsed && (
+                                <Box
+                                    display="flex"
+                                    justifyContent="space-between"
+                                    alignItems="center"
+                                    ml="15px">
+                                        <Typography variant="h3" color={colors.grey[100]}>
+                                            ADMINS
+                                        </Typography>
+                                        <IconButton onClick={()=> setIsCollapsed(!isCollapsed)}>
+                                            <MenuOutLinedICon />
+                                        </IconButton>
+                                    </Box>
+                            )}
+                        </MenuItem>
+                        {!isCollapsed && (
+                            <Box mb="25px">
+                                <Box display="flex" justifyContent="center" alignItems="center">
+                                    <img
+                                        alt="profile-user"
+                                        width="100px"
+                                        height="100px"
+                                        src={`../../assets/user.png`}
+                                        style={{ cursor: "pointer", borderRadius:"50%"}}
+
+                                    />
+                                </Box>
+
+                                <Box textAlign="center">
+                                    <Typography 
+                                        variant="h2" 
+                                        color={colors.grey[100]}
+                                        fontWeight="bold"
+                                        sx={{
+                                            m: "10px 0 0 0"
+                                        }}
+                                        >Jeff Vos</Typography>
+                                    <Typography
+                                        variant="h5"
+                                        color={colors.greenAccent[500]}
+                                        >CEO</Typography>
+                                </Box>
+                            </Box>
+                        )}
+                </Menu>
+            </ProSidebar>
 
         </Box>
     )
