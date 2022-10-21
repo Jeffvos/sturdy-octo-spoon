@@ -235,6 +235,62 @@ const Dashboard = () => {
             </Typography>
           </Box>
         </Box>
+        <Box
+          gridColumn="span 4"
+          gridRow="span 2"
+          backgroundColor={colors.primary[400]}
+          p="30px"
+        >
+          <Typography variant="h5" fontWeight="600">
+            Campaign
+          </Typography>
+          <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            mt="25px"
+          >
+            <ProgressCircle size="125" />
+            <Typography
+              variant="h5"
+              color={colors.greenAccent[500]}
+              sx={{ mt: "15px" }}
+            >
+              $56,566 revenue Generated
+            </Typography>
+            <Typography variant="h5" fontWeight="600">
+              Includes all costs
+            </Typography>
+          </Box>
+        </Box>
+        <Box
+          gridColumn="span 4"
+          gridRow="span 2"
+          backgroundColor={colors.primary[400]}
+          p="30px"
+        >
+          <Typography variant="h5" fontWeight="600">
+            Campaign
+          </Typography>
+          <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            mt="25px"
+          >
+            <ProgressCircle size="125" />
+            <Typography
+              variant="h5"
+              color={colors.greenAccent[500]}
+              sx={{ mt: "15px" }}
+            >
+              $56,566 revenue Generated
+            </Typography>
+            <Typography variant="h5" fontWeight="600">
+              Includes all costs
+            </Typography>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
